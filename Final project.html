@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Massage day 🤩</title>
+    <style>
+      .mypage {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px 60px;
+        display: block;
+         background: linear-gradient(#4f4681, #9198e5);
+         border-radius: 20px 20px;
+
+      }
+      h1 {
+        color: #885df1;
+        text-align: center;
+        font-weight: bolder;
+        border: 1px solid #351f8b;
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 1px 2px rgb(201, 199, 199);
+
+      }
+      h2 {
+        color: #eca9c5;
+        text-align: center;
+        border: 1px solid #44338a;
+        padding: 15px;
+        font-size: 18px;
+      
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 20px 20px 20px;
+      }
+      p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 20px 0 12px;
+      }
+      button {
+        margin: 20px auto;
+        color: #aa8cf5;
+        padding: 15px 20px;
+        background: #885df1;
+        font: 18px;
+        display: block;
+        border: 1px solid grey;
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 1px 2px rgb(201, 199, 199);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: #1a64d6;
+        border: 1px solid #1a64d6;
+        cursor: pointer;
+        opacity: 0.9;
+      }
+      .footer {
+        text-align: center;
+      }
+      a {
+        margin: 0 auto;
+        color: #b13286;
+        text-decoration: none;
+        font-size: 12px;
+        align-items: center;
+        display:block;
+
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mypage">
+      <h1>Relaxation <strong>Massage</strong></h1>
+      <hr />
+      <h2>Unforgetable <em> Swedish Massage</em></h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/132/563/original/massage.jpeg?1720632861"
+       alt="massage session"
+       width="300"/> 
+
+       <p>
+        It is an effective therapeutic practice for many neurological and
+        orthopaedic conditions.<br />
+        Through its combination of soothing strokes,<br />
+        deep tissue manipulation, and physiological effects,<br />
+        Swedish massage can help promote relaxation,
+        reduce muscle tension, <br />improve circulation, and foster overall
+        well-being.
+      </p>
+    
+
+    <a href="https://en.wiktionary.org/wiki/Swedish_massage"
+      target="_blank"
+    >
+      Learn more on Wikipedia
+    </a>
+
+    <button>🤞Book appointment</button>
+    <p class="footer">
+      
+      <span class=" p-title">built by:</span> 
+      <em> Naomy Sawe</em>
+    </p>
+    </div>
+    </body>
+
+    <script>
+      function bookAppointment() {
+        let firstName = prompt("what is your first name?");
+        let email = prompt("what is your email account?");
+        let massageName = prompt("what massage do you want to book?");
+        let massageType = prompt("what type do you want?");
+
+        massageName = massageName.toLowerCase().trim();
+        if (massageName === "swedish" && massageType === "fullbody") {
+          alert(
+            "Aaaaaw😍 " +
+              firstName +
+              " You are legible for our weekly discount 🤑"
+          );
+        } else {
+          alert("Thank you😍 " + firstName + " for booking with us.");
+        }
+      }
+
+      let bookappointmentButton = document.querySelector("button");
+      bookappointmentButton.addEventListener("click", bookAppointment);
+    </script>
+  </body>
+</html>
