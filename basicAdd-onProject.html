@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my favour fruit</title>
+    <style>
+      body {
+        background: #ac94b3;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        background: white;
+        font-size: 20px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: rgb(202, 29, 202);
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: rgb(40, 161, 151);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background: #9cecec1a;
+      }
+
+      .dark a {
+        color: rgb(189, 45, 189);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark theme</button>
+    <div class="container">
+      <h1>Grape Fruit <br />🍇</h1>
+      <h2>Grapes are healthy</h2>
+      <a href="https://en.wikipedia.org/wiki/Merlot" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/37/Merlot.jpg"
+          alt=""
+          class="intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://media.istockphoto.com/id/1972530702/photo/many-bunches-of-red-grapes-in-market.webp?b=1&s=170667a&w=0&k=20&c=72FD1Y-mO_7_nqGrqq5StVrMY-kvjVAQz1Z0XeZGz3c="
+          alt=""
+        />
+        <img
+          src="https://media.istockphoto.com/id/1745009177/photo/red-grapes.webp?b=1&s=170667a&w=0&k=20&c=iBQFRK9fQD5wLn1ECSbKQO_Sw4zidIr1vNLHvQ80UNs="
+        />
+        <img
+          src="https://media.istockphoto.com/id/1745009177/photo/red-grapes.webp?b=1&s=170667a&w=0&k=20&c=iBQFRK9fQD5wLn1ECSbKQO_Sw4zidIr1vNLHvQ80UNs="
+        />
+        <img
+          src="https://media.istockphoto.com/id/1403057671/photo/grape-on-white.webp?b=1&s=170667a&w=0&k=20&c=ZSpDiYoWiLa1EQpJsle_H3EDSvWayt_5Immc1Ruoynk="
+        />
+      </div>
+      <p>
+
+      A grape is a fruit, botanically a berry, of the deciduous woody vines of
+        the flowering plant genus Vitis. Grapes are a non-climacteric type of
+        fruit, generally occurring in clusters. THE cultivation of grapes began
+        perhaps 8,000 years ago, and the fruit has been used as human food over
+        history. Eaten fresh or in dried form (as raisins, currants and
+        sultanas), grapes also hold cultural significance in many parts of the
+        world, particularly for their role in winemaking. Other grape-derived
+        products include various types of jam, juice, vinegar and oil.
+        <br /><br />
+        💻
+        <a href="https://en.wikipedia.org/wiki/Grape">
+          <strong> Read on Wikipedia </strong>
+        </a>
+      </p>
+      <button class="orders">order Now</button>
+    </div>
+    <footer>coded by<strong>Naomy Sawe</strong> <em>using html css javascript</em></footer>
+    </div>
+    <footer>
+     <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+      
+      function orderNow() {
+        let firstName = prompt("what is your first name?");
+        let email = prompt("what is your email account?");
+        let grapeType = prompt("what type of grape do you want?");
+        let amount = prompt("how much do you want?");
+
+        grapeType = grapeType.toLowerCase().trim();
+        if (grapeType === "cotton-candy" && amount >=5) {
+          alert(
+            "Aaaaaw😍 " +
+              firstName +
+              " You are legible for our weekly discount 🤑"
+          );
+        } else {
+          alert("Thank you😍 " + firstName + " for ordering with us.");
+        }
+      }
+
+      let orderNowButton = document.querySelector(".orders");
+      orderNowButton.addEventListener("click", orderNow);
+    </script>
+  </body>
+</html>
